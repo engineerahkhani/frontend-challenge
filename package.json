@@ -1,22 +1,49 @@
 {
-  "name": "frontend-challenge",
-  "version": "1.0.0",
-  "description": "Sheypoor frontend challenge",
-  "main": "sdk/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sheypoor/frontend-challenge.git"
-  },
-  "author": "Pendar Safari <pendar.safari@gmail.com>",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/sheypoor/frontend-challenge/issues"
-  },
-  "homepage": "https://github.com/sheypoor/frontend-challenge#readme",
-  "dependencies": {
-    "sdk": "file:sdk"
-  }
+    "name": "frontend-challenge",
+    "version": "1.0.0",
+    "description": "Sheypoor frontend challenge",
+    "main": "sdk/index.js",
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test --env=jsdom",
+        "eject": "react-scripts eject"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sheypoor/frontend-challenge.git"
+    },
+    "author": "Pendar Safari <pendar.safari@gmail.com>",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/sheypoor/frontend-challenge/issues"
+    },
+    "homepage": "https://github.com/sheypoor/frontend-challenge#readme",
+    "dependencies": {
+        "fbjs": "^1.0.0",
+        "immutability-helper": "^3.0.0",
+        "lodash": "^4.17.11",
+        "node-sass": "^4.12.0",
+        "rc-tabs": "^9.6.3",
+        "react": "^16.8.6",
+        "react-dom": "^16.8.6",
+        "react-redux": "^7.0.3",
+        "react-scripts": "^3.0.0",
+        "redux": "^4.0.1",
+        "redux-logger": "^3.0.6",
+        "redux-saga": "^1.0.2",
+        "sdk": "file:sdk"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    }
 }
