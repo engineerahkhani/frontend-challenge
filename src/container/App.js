@@ -1,22 +1,51 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { posterListInit } from '../action';
-import car from '../images/car.jpg';
+import {
+    posterListInit,
+    posterListFilter,
+    posterListRemoveItem
+} from '../action';
+import { Navbar, Tab, PosterList, Loader } from '../component';
 
 class HomePage extends React.Component {
-    state = { activeTab: 1 };
+    state = { activeTab: 'all' };
     componentDidMount() {
         this.props.posterListInit();
     }
-    callback = activeTab => this.setState({ activeTab });
+
+    onClickTab = filter => {
+        this.setState({ activeTab: filter }, () =>
+            this.props.posterListFilter(filter)
+        );
+    };
+    onClickDelete = id =>
+        this.props.posterListRemoveItem(id, this.state.activeTab);
 
     render() {
-        return <div className="poster" />;
+        const { posterList, loading } = this.props;
+        const { activeTab } = this.state;
+        return (
+            <React.Fragment>
+                <Navbar />
+                <Tab onClick={this.onClickTab} activeTab={activeTab} />
+                {loading ? (
+                    <Loader />
+                ) : (
+                    <PosterList
+                        posters={posterList[activeTab]}
+                        onClickDelete={this.onClickDelete}
+                    />
+                )}
+            </React.Fragment>
+        );
     }
 }
 
-const mapStateToProps = state => ({});
+const mapStateToProps = state => ({
+    posterList: state.posterList,
+    loading: state.loading.visible
+});
 export default connect(
     mapStateToProps,
-    { posterListInit }
+    { posterListInit, posterListFilter, posterListRemoveItem }
 )(HomePage);

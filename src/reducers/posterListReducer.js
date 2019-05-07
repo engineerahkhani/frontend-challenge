@@ -3,16 +3,18 @@ import { createReducer } from '../lib';
 import { ActionTypes } from '../const';
 
 export const cmpState = {
-    data: []
+    all: [],
+    active: [],
+    inactive: []
 };
 
 export default {
     posterList: createReducer(cmpState, {
-        [ActionTypes.POSTER_LIST_SUCCESS](state, { data }) {
+        [ActionTypes.POSTER_LIST_SUCCESS](state, { data, status }) {
             return immutable(state, {
-                data: { $set: data }
+                [status]: { $set: data }
             });
         }
     })
 };
-export const getPosterList = state => state.posterList.data;
+export const getPosterList = state => state.posterList;

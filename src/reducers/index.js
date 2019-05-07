@@ -1,6 +1,7 @@
 import posterListReducer from './posterListReducer';
-// import loading from './loading';
+import loading from './loading';
 
 export default {
-    ...posterListReducer
+    ...posterListReducer,
+    ...loading
 };

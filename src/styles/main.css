@@ -1,0 +1,192 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.nav {
+  background-color: #fff;
+  padding: 20px 10px 10px 10px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__right-block {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+}
+.nav__menu-icon {
+  color: #424650;
+}
+.nav__avatar-img {
+  height: 35px;
+  width: 35px;
+  margin-left: 5px;
+}
+.nav__avatar {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 30px;
+}
+.nav__avatar-title {
+  color: #343a43;
+  font-size: 0.9em;
+  font-family: "Vazir", sans-serif;
+}
+.tab {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-basis: 100%;
+  flex: 1;
+  padding: 10px 0 0 0;
+  box-shadow: 0 4px 2px -2px gray;
+}
+.tab__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 100%;
+  flex: 1;
+  color: #979aa0;
+  font-size: 1em;
+  font-family: "Vazir", sans-serif;
+}
+.tab__item--active {
+  border-bottom: 2px solid #1583fb;
+  color: #343a43;
+}
+.poster-list {
+  background-color: #f7f7f7;
+  height: 100vh;
+}
+.poster {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 10px 0px 10px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 1px 1px 1px 1px #f1f1f1;
+  margin: 8px;
+}
+.margin-top-0 {
+  margin-top: 0;
+}
+.poster__info {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.poster__img-block {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  margin-bottom: 10px;
+}
+.poster__img {
+  width: 100%;
+  border-radius: 3px;
+  object-fit: cover;
+}
+.poster__img:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+.poster__caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #f7c033;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 0;
+  border-radius: 3px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  font-family: "Vazir", sans-serif;
+  font-size: 0.8em;
+}
+.poster__detail-block {
+  padding: 10px 5px;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.poster__title {
+  color: #343a43;
+  font-size: 1.1em;
+  font-family: "Vazir", sans-serif;
+}
+.poster__time {
+  font-family: "Vazir", sans-serif;
+  font-size: 0.9em;
+  color: #9da0a5;
+}
+.poster__price {
+  font-family: "Vazir", sans-serif;
+  color: #71757c;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+}
+.poster__price-unit {
+  font-family: "Vazir", sans-serif;
+  font-size: 0.7em;
+  color: #999ca1;
+  margin-right: 3px;
+}
+.poster__actions {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  border-top: 1px solid #f8f8f9;
+}
+.poster__btn {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+  flex-basis: 100%;
+  flex: 1;
+  padding: 10px 15px;
+  margin: 2px 0;
+}
+.poster__btn--bordered {
+  border-left: 1px solid #f8f8f9;
+}
+.poster__btn-icon {
+  color: #1583fb;
+}
+.poster__btn-text {
+  color: #1583fb;
+  font-family: "Vazir", sans-serif;
+  font-size: 0.9em;
+}
+.loader {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  color: #1583fb;
+  font-family: "Vazir", sans-serif;
+  font-size: 0.9em;
+}

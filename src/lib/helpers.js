@@ -1,5 +1,3 @@
-import _ from 'lodash';
-
 export function createReducer(initialState, handlers) {
     return function reducer(state = initialState, action) {
         if ({}.hasOwnProperty.call(handlers, action.type)) {
